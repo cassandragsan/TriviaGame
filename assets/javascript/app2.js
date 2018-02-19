@@ -52,7 +52,7 @@ var gameVariables = {
 
 	ansCorrect: 0, 
 	ansIncorrect: 0,
-	counter: 10,
+	counter: 180,
 
 //********************************************************************************************************
 // timerCountDown - this is the timer that runs - show this on the DOM
@@ -79,7 +79,7 @@ var gameVariables = {
   	startGame: function() {
     	timer = setInterval(gameVariables.timerCountDown, 1000);
 
-    	$("#wrapper").prepend("<h1>Time Remaining: <span id='counter'>10</span> Seconds</h1>");
+    	$("#wrapper").prepend("<h1>Time Remaining: <span id='counter'>180</span> Seconds</h1>");
 
     	// Remove the start button
     	$("#startGame").remove();
