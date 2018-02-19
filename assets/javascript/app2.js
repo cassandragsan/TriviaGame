@@ -65,8 +65,6 @@ var gameVariables = {
     	$("#counter").html(gameVariables.counter);
     	// If the counter = 0, that means time is up and to run the done function which is defined in the game variables 
     	if (gameVariables.counter === 0) {
-     	  // Stop the timer
-     	  clearInterval(timer);
     	  // Run the done Function
      	  gameVariables.submitAnswers();
     	}
@@ -205,7 +203,9 @@ var gameVariables = {
     qFrame.append("<h3>Correct Answers: " + this.ansCorrect + "</h3>");
     qFrame.append("<h3>Incorrect Answers: " + this.ansIncorrect + "</h3>");
     qFrame.append("<h3>Not Answered: " + (questions.length - (this.ansIncorrect + this.ansCorrect)) + "</h3>");
- 
+ 	
+ 	// Stop the timer
+ 	clearInterval(timer);
   }
 };
 
@@ -222,4 +222,6 @@ $(document).on("click", "#startGame", function() {
 //********************************************************************************************************
 $(document).on("click", "#submitAnswers", function() {
   gameVariables.submitAnswers();
+// Stop the timer
+
 });
